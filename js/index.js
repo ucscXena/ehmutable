@@ -1,10 +1,10 @@
 /*global console: false */
 'use strict';
 console.log('hello');
-var f = x => 2*x;
+var f = x => 2 * x;
 console.log(f(5));
 
-// destructuring with default 
+// destructuring with default
 function g({x = 6}) {
 	console.log('x', x);
 }

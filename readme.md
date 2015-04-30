@@ -16,6 +16,10 @@ The build is based on npm and webpack.
  * `npm start`
  * browse to [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/)
 
+### Lint
+
+Use `npm run lint` to run the lint rules. We lint with eslint and babel-eslint.
+
 ### References
  * http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
  * http://webpack.github.io/

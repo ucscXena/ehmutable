@@ -1,6 +1,6 @@
 /*global define: false, config: false */
+'use strict';
 define([], function () {
-	'use strict';
 	return config;
 });
 
