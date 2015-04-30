@@ -5,7 +5,7 @@ var webpack = require('webpack');
 
 module.exports = {
 	historyApiFallback: true,
-	entry: "./js/index",
+	entry: "./js/bogorouter",
 	output: {
 		path: "build",
 		publicPath: "/",
