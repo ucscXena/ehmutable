@@ -15,8 +15,7 @@ module.exports = {
 		loaders: [
 			{ test: /rx-dom/, loader: "imports?define=>false" },
 			{ test: /\.css$/, loader: "style!css" },
-			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?optional=runtime,cacheDirectory=true'},
-			{ test: /\.haml$/, loader: 'haml-loader' },
+			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?optional=runtime,es7.objectRestSpread,cacheDirectory=true'},
 			{ test: /\.(jpe?g|png|gif|svg|eot|woff2?|ttf)$/i, loaders: ['url?limit=10000'] }
 		]
 	},
