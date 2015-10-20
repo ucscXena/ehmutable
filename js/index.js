@@ -14,6 +14,13 @@ function h({x: {y} = {}}) {
 	console.log('y', y);
 }
 
+// object rest spread
+var a = {foo: 'bar'};
+
+var b = {baz: 'foo', ...a};
+
+console.log(b);
+
 g({x: 10});
 g({});
 h({x: {y: 7}});
