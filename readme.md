@@ -98,9 +98,11 @@ _.assocIn({a: 3}, ['b', 'c'], 5, ['a'], 7); // -> {a: 7, b: {c: 5}}
 ```
 
 ### updateIn
-Update a path in a nested structure, with a function.
+Update a path in a nested structure, with a function. Multiple
+paths/functions may be given.
 ```javascript
 _.updateIn({a: 3, b: [1, 2]}, ['b', 1], x => x + 1); // -> {a: 3, b: [1, 3]}
+_.updateIn({a: 3, b: 7}, ['a'], x => x + 1, ['b'], x => x - 1); // -> {a: 4, b: 6}
 ```
 
 ### getIn
