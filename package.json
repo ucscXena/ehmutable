@@ -1,6 +1,6 @@
 {
   "name": "ehmutable",
-  "version": "1.0.0",
+  "version": "1.1.0-alpha.0",
   "description": "immutable helpers looking vaguely like clojure",
   "main": "index.js",
   "scripts": {
