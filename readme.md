@@ -86,6 +86,7 @@ Append a value to an object or array.
 ```javascript
 _.conj([2, 3], 5); // -> [2, 3, 5]
 _.conj({'a': 3}, ['b', 5]); // -> {a: 3, b: 5}
+```
 
 ### assocIn
 Assign to a path in a nested structure. Creates objects as needed.
@@ -94,14 +95,15 @@ Mutiple path/values may be given.
 _.assocIn(['x', {a: 3}], [1, 'a'], 5); // -> ['x', {a: 5}]
 _.assocIn({a: 3}, ['b', 'c'], 5); // -> {a: 3, b: {c: 5}}
 _.assocIn({a: 3}, ['b', 'c'], 5, ['a'], 7); // -> {a: 7, b: {c: 5}}
+```
 
-## updateIn
+### updateIn
 Update a path in a nested structure, with a function.
 ```javascript
 _.updateIn({a: 3, b: [1, 2]}, ['b', 1], x => x + 1); // -> {a: 3, b: [1, 3]}
 ```
 
-## getIn
+### getIn
 Return the value at a path in a nested structure, or a default.
 ```javascript
 _.getIn({a: 3, b: [1, 3]}, ['b', 1]); // -> 3
