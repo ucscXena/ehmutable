@@ -79,6 +79,11 @@ describe('ehmutable', function () {
 			var x = {a: 3, b: {c: 3}};
 			assert.strictEqual(_.assocIn(x, ['b', 'c'], 3), x);
 		});
+		it('should work on empty key path', function() {
+			assert.deepEqual(
+				_.assocIn({a: 3, b: 7}, [], {z: 7}),
+				{z: 7});
+		});
 	});
 	describe('#updateIn', function () {
 		it('should update nested value', function() {
@@ -91,6 +96,11 @@ describe('ehmutable', function () {
 		it('should do multiple updates', function() {
 			assert.deepEqual(_.updateIn({a: 3, b: 7},
 					['a'], x => x + 1, ['b'], x => x - 1), {a: 4, b: 6});
+		});
+		it('should work on empty key path', function() {
+			assert.deepEqual(
+				_.updateIn({a: 3, b: 7}, [], x => _.dissoc(x, 'b')),
+				{a: 3});
 		});
 	});
 	describe('#getIn', function () {

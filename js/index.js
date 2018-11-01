@@ -76,13 +76,14 @@ function assoc(x) {
 
 function assocInI(x, keys, v, i) {
 	var ki = keys[i];
-	if (keys.length === i + 1) {
-		return assoc(x, ki, v);
+	if (keys.length === i) {
+		return v;
 	}
 	return assoc(x, ki, assocInI(x && x[ki], keys, v, i + 1));
 }
 
 function assocIn(x, keys, v) {
+	assert(keys instanceof Array, 'keys should be an array');
 	return assocInI(x, keys, v, 0);
 }
 
@@ -104,13 +105,14 @@ function conj(x, v) {
 
 function updateInI(x, keys, fn, i) {
 	var ki = keys[i];
-	if (keys.length === i + 1) {
-		return assoc(x, ki, fn(x && x[ki]));
+	if (keys.length === i) {
+		return fn(x);
 	}
 	return assoc(x, ki, updateInI(x && x[ki], keys, fn, i + 1));
 }
 
 function updateIn(x, keys, fn) {
+	assert(keys instanceof Array, 'keys should be an array');
 	return updateInI(x, keys, fn, 0);
 }
 
